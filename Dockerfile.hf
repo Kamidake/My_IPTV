@@ -12,7 +12,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Clone the repository and checkout specified branch
-RUN git clone https://github.com/mccoy88f/OMG-Premium-TV.git . && \
+RUN git clone https://github.com/Kamidake/My_IPTV.git . && \
     git checkout ${BRANCH}
 
 # Install dependencies
