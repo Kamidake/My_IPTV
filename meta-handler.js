@@ -36,7 +36,7 @@ function enrichWithDetailedEPG(meta, channelId, userConfig) {
         }
 
         if (upcomingPrograms?.length > 0) {
-            description.push('', '📅 UPCOMING SCHEDULE:');
+            description.push('', '📅 UPCOMING:');
             upcomingPrograms.forEach(program => {
                 description.push(
                     '',
