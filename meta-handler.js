@@ -23,7 +23,7 @@ function enrichWithDetailedEPG(meta, channelId, userConfig) {
     if (currentProgram) {
         let description = [];
         
-        description.push('📺 IN ONDA ORA:', currentProgram.title);
+        description.push('📺 NOW AIRING:', currentProgram.title);
         
         if (currentProgram.description) {
             description.push('', currentProgram.description);
@@ -36,7 +36,7 @@ function enrichWithDetailedEPG(meta, channelId, userConfig) {
         }
 
         if (upcomingPrograms?.length > 0) {
-            description.push('', '📅 PROSSIMI PROGRAMMI:');
+            description.push('', '📅 UPCOMING SCHEDULE:');
             upcomingPrograms.forEach(program => {
                 description.push(
                     '',
