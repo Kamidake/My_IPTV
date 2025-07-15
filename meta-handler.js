@@ -85,7 +85,7 @@ async function metaHandler({ type, id, config: userConfig }) {
 
 
         const meta = {
-            id: channel.id,
+            id: '',
             type: 'tv',
             name: channel.streamInfo?.tvg?.chno 
                 ? `${channel.streamInfo.tvg.chno}. ${channel.name}`
@@ -102,7 +102,7 @@ async function metaHandler({ type, id, config: userConfig }) {
             isFree: true,
             behaviorHints: {
                 isLive: true,
-                defaultVideoId: channel.id
+                defaultVideoId: ''
             }
         };
 
