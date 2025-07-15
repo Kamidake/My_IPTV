@@ -125,7 +125,7 @@ async function metaHandler({ type, id, config: userConfig }) {
         if (channel.description) {
             baseDescription.push('', channel.description);
         } else {
-            baseDescription.push('', `ID Canale: ${channel.streamInfo?.tvg?.id}`);
+            baseDescription.push('', `ID Channel: ${channel.streamInfo?.tvg?.id}`);
         }
 
         meta.description = baseDescription.join('\n');
