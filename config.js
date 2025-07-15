@@ -5,15 +5,15 @@ const baseConfig = {
     port: process.env.PORT || 10000,
     defaultUserAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
     cacheSettings: {
-        updateInterval: 12 * 60 * 60 * 1000,
-        maxAge: 24 * 60 * 60 * 1000,
+        updateInterval: 2 * 60 * 60 * 1000,
+        maxAge: 12 * 60 * 60 * 1000,
         retryAttempts: 3,
         retryDelay: 5000
     },
     epgSettings: {
         maxProgramsPerChannel: 50,
-        updateInterval: 12 * 60 * 60 * 1000,
-        cacheExpiry: 24 * 60 * 60 * 1000
+        updateInterval: 2 * 60 * 60 * 1000,
+        cacheExpiry: 12 * 60 * 60 * 1000
     },
     manifest: {
         id: 'org.mccoy88f.omgtv',

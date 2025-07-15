@@ -24,10 +24,10 @@ class EPGManager {
 
     validateAndSetTimezone() {
         const tzRegex = /^[+-]\d{1,2}:\d{2}$/;
-        const timeZone = process.env.TIMEZONE_OFFSET || '+1:00';
+        const timeZone = process.env.TIMEZONE_OFFSET || '+2:00';
         
         if (!tzRegex.test(timeZone)) {
-            this.timeZoneOffset = '+1:00';
+            this.timeZoneOffset = '+2:00';
             return;
         }
         

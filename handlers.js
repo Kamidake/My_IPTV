@@ -95,13 +95,6 @@ async function catalogHandler({ type, id, extra, config: userConfig }) {
         let filteredChannels = CacheManager.getFilteredChannels();
         const cachedData = CacheManager.getCachedData();
 
-        // Ordina i canali
-        filteredChannels.sort((a, b) => {
-            const numA = parseInt(a.streamInfo?.tvg?.chno) || Number.MAX_SAFE_INTEGER;
-            const numB = parseInt(b.streamInfo?.tvg?.chno) || Number.MAX_SAFE_INTEGER;
-            return numA - numB || a.name.localeCompare(b.name);
-        });
-
         const paginatedChannels = filteredChannels.slice(skip, skip + ITEMS_PER_PAGE);
 
         const metas = paginatedChannels.map(channel => {

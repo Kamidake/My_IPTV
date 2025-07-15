@@ -1,5 +1,5 @@
 # Usa un'immagine Node.js come base
-FROM node:16-slim
+FROM node:20-slim
 
 # Imposta la directory di lavoro
 WORKDIR /app
@@ -7,7 +7,7 @@ WORKDIR /app
 # Installa git, Python e pip (se necessario)
 RUN apt-get update && \
     apt-get install -y git python3 python3-pip && \
-    pip3 install requests && \
+    pip3 install requests --break-system-packages && \
     rm -rf /var/lib/apt/lists/*
 
 # Copia i file del progetto
