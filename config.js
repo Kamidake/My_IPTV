@@ -3,7 +3,7 @@ const path = require('path');
 
 const baseConfig = {
     port: process.env.PORT || 10000,
-    defaultUserAgent: 'potplayer',
+    defaultUserAgent: 'ExoPlayer/2.18.1',
     cacheSettings: {
         updateInterval: 2 * 60 * 60 * 1000,
         maxAge: 12 * 60 * 60 * 1000,
