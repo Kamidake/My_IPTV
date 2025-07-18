@@ -5,13 +5,20 @@ services:
     image: node:20-slim
     container_name: omg-premium-tv
 
+    restart: unless-stopped
+
     environment:
-      - PORT=7860
+      - PORT=10000
       - HOST=0.0.0.0
       
     working_dir: /app
-    volumes:
-      - .:/app # Monta la directory corrente nel container (opzionale, se vuoi lavorare con file locali)
+
+#    volumes:
+#      - .:/app # Monta la directory corrente nel container (opzionale, se vuoi lavorare con file locali)
+
+    ports:
+      - "10000:10000"
+
     command: >
       sh -c "
         apt-get update && apt-get install -y git python3 python3-pip &&
