@@ -1,0 +1,9 @@
+services:
+  omgtv:
+    x-miget:
+      ram: 512
+
+  postgres:
+    x-miget:
+      managed: postgres
+      private: true
